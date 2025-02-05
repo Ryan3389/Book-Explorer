@@ -1,0 +1,92 @@
+:root {
+    --navy-blue: #2C3E50;
+    --light-beige: #F5F1E3;
+    --button-color: #D35400;
+    --button-hover: #3498DB;
+}
+
+/* Header + Nav + Footer */
+header {
+    background-color: var(--navy-blue);
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+nav p,
+a {
+    color: var(--light-beige);
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer {
+    background-color: var(--navy-blue);
+}
+
+.footer-container {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-beige);
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+
+footer a {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+/* Hero Section */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: var(--light-beige);
+    text-align: center;
+}
+
+.hero-cta {
+    line-height: 1.5;
+}
+
+.hero-cta h1 {
+    font-size: 2.125rem;
+}
+
+.hero-cta p {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.hero-cta button {
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    width: 40%;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    color: var(--navy-blue);
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.hero-cta button:hover {
+    background-color: var(--button-hover);
+    transition: 0.3s;
+}
