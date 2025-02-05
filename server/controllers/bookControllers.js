@@ -1,9 +1,34 @@
-function bookCategory(req, res) {
+async function bookCategory(req, res) {
     try {
-        res.status(200).json("Route is working")
+        const { subject } = req.query
+        const url = `https://openlibrary.org/subjects/${subject}.json`
+
+        const response = await fetch(url)
+
+        const data = await response.json()
+
+        res.status(200).json({ results: data })
     } catch (error) {
         console.error(error)
     }
 }
 
-module.exports = { bookCategory }
+async function searchBook(req, res) {
+    const { searchTerm } = req.body
+    try {
+        const url = `https://openlibrary.org/search.json?title=${searchTerm}`
+
+        const response = await fetch(url)
+        if (!response.ok) {
+            throw new Error
+        }
+
+        const data = await response.json()
+
+        res.status(200).json({ results: data })
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+module.exports = { bookCategory, searchBook }
