@@ -6,6 +6,7 @@ import './index.css'
 
 import HomePage from './pages/HomePage.jsx'
 import BookCategory from './pages/BookCategory.jsx'
+import SearchPage from './pages/SearchPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/category',
         element: <BookCategory />
+      },
+      {
+        path: '/search',
+        element: <SearchPage />
       }
     ]
   }

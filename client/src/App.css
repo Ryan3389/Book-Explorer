@@ -74,7 +74,7 @@ footer a {
     margin-bottom: 5px;
 }
 
-.hero-cta button {
+.hero-cta .search-btn {
     background-color: var(--button-color);
     padding: 10px 20px;
     width: 40%;
@@ -84,9 +84,10 @@ footer a {
     color: var(--navy-blue);
     font-weight: 600;
     border-radius: 10px;
+    text-decoration: none;
 }
 
-.hero-cta button:hover {
+.hero-cta .search-btn:hover {
     background-color: var(--button-hover);
     transition: 0.3s;
 }

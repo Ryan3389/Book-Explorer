@@ -14,9 +14,9 @@ async function bookCategory(req, res) {
 }
 
 async function searchBook(req, res) {
-    const { searchTerm } = req.body
+    const { search } = req.body
     try {
-        const url = `https://openlibrary.org/search.json?title=${searchTerm}`
+        const url = `https://openlibrary.org/search.json?title=${search}`
 
         const response = await fetch(url)
         if (!response.ok) {
