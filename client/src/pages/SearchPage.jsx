@@ -33,7 +33,13 @@ function SearchPage() {
             const data = await response.json()
             const topResults = data.results.docs.slice(0, 9)
 
+            const updateSearchState = topResults.map(book => ({
+                title: book.title,
+                author: book.author_name[0],
+                bookId: book.cover_i
+            }))
 
+            setSearchResults(updateSearchState)
             console.log(topResults)
         } catch (error) {
             console.error(error)
@@ -41,17 +47,28 @@ function SearchPage() {
     }
     return (
         <section className="book-section">
-            <form onSubmit={handleFormSubmit}>
-                <label htmlFor="search">Search Books</label>
-                <input
-                    type="text"
-                    name="search"
-                    id="search"
-                    onChange={handleChange}
-                />
-                <input type="submit" value="Search" />
-            </form>
+            <span className="form-container">
+                <form onSubmit={handleFormSubmit}>
+                    <label htmlFor="search">Search Books</label>
+                    <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        onChange={handleChange}
+                    />
+                    <input type="submit" value="Search" />
+                </form>
 
+            </span>
+            <div className="book-category">
+                {searchResults.map((book, index) => (
+                    <BookCard
+                        title={book.title}
+                        author={book.author}
+                        bookId={book.bookId}
+                    />
+                ))}
+            </div>
         </section>
     )
 }
