@@ -7,9 +7,9 @@ function Navbar() {
                     <p>BookQuest</p>
                 </span>
                 <span>
-                    <Link>Science Fiction</Link>
-                    <Link>Category</Link>
-                    <Link>Category</Link>
+                    <Link to={`/category?subject=${encodeURIComponent('science_fiction')}`}>Science Fiction</Link>
+                    <Link to={`/category?subject=${encodeURIComponent('mystery')}`}>Mystery</Link>
+                    <Link to={`/category?subject=${encodeURIComponent('horror')}`}>Horror</Link>
                 </span>
             </nav>
         </header>

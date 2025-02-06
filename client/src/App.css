@@ -90,3 +90,27 @@ footer a {
     background-color: var(--button-hover);
     transition: 0.3s;
 }
+
+/* Book Category */
+.book-section {
+    background-color: var(--light-beige);
+    height: 80vh;
+}
+
+.book-category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    gap: 5px;
+}
+
+.book-card {
+    border: 1px solid;
+    text-align: center;
+
+}
+
+.book-img {
+    height: 120px;
+}
