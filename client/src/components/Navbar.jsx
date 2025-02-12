@@ -4,10 +4,12 @@ function Navbar() {
         <header>
             <nav>
                 <span>
-                    <p>BookQuest</p>
+                    <Link to={'/'}>
+                        <p>BookQuest</p>
+                    </Link>
                 </span>
                 <span>
-                    <Link to={`/category?subject=${encodeURIComponent('science_fiction')}`}>Science Fiction</Link>
+                    <Link to={`/category?subject=${encodeURIComponent('history')}`}>History</Link>
                     <Link to={`/category?subject=${encodeURIComponent('mystery')}`}>Mystery</Link>
                     <Link to={`/category?subject=${encodeURIComponent('horror')}`}>Horror</Link>
                 </span>

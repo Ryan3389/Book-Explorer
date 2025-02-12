@@ -49,12 +49,13 @@ function SearchPage() {
         <section className="book-section">
             <span className="form-container">
                 <form onSubmit={handleFormSubmit}>
-                    <label htmlFor="search">Search Books</label>
+                    {/* <label htmlFor="search">Search Books</label> */}
                     <input
                         type="text"
                         name="search"
                         id="search"
                         onChange={handleChange}
+                        placeholder="Search..."
                     />
                     <input type="submit" value="Search" />
                 </form>

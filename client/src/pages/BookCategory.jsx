@@ -37,7 +37,7 @@ function BookCategory() {
 
     return (
         <section className="book-section">
-            <h1>{subject}</h1>
+            <h1>{subject.charAt(0).toUpperCase() + subject.slice(1)}</h1>
             <div className="book-category">
                 {bookData.map((book, index) => (
                     <BookCard
